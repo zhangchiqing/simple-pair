@@ -4,7 +4,10 @@
   "description": "Simple pair implementation",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests.js"
+    "test": "mocha tests.js",
+    "release-major": "xyz --repo git@github.com:zhangchiqing/simple-pair.git --increment major",
+    "release-minor": "xyz --repo git@github.com:zhangchiqing/simple-pair.git --increment minor",
+    "release-patch": "xyz --repo git@github.com:zhangchiqing/simple-pair.git --increment patch"
   },
   "repository": {
     "type": "git",
@@ -24,6 +27,7 @@
     "ramda": "^0.22.1"
   },
   "devDependencies": {
+    "xyz": "^0.5.0",
     "mocha": "^3.1.0"
   }
 }
