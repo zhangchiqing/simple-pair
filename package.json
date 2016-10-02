@@ -1,6 +1,6 @@
 {
   "name": "simple-pair",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Simple pair implementation",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/zhangchiqing/simple-pair#readme",
   "dependencies": {
-    "mocha": "^3.1.0",
     "ramda": "^0.22.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.1.0"
   }
 }
