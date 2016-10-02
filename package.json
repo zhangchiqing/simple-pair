@@ -1,0 +1,27 @@
+{
+  "name": "simple-pair",
+  "version": "0.1.0",
+  "description": "Simple pair implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangchiqing/simple-pair.git"
+  },
+  "keywords": [
+    "pair",
+    "pairs"
+  ],
+  "author": "Leo Zhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhangchiqing/simple-pair/issues"
+  },
+  "homepage": "https://github.com/zhangchiqing/simple-pair#readme",
+  "dependencies": {
+    "mocha": "^3.1.0",
+    "ramda": "^0.22.1"
+  }
+}
