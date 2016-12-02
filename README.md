@@ -65,7 +65,9 @@ var indexer = function(
 Pair.make :: a -> b -> Pair a b
 Pair.first :: Pair a b -> a
 Pair.second :: Pair a b -> b
+Pair.mapFirst :: (a -> c) -> Pair a b -> Pair c b
 Pair.mapSecond :: (b -> c) -> Pair a b -> Pair a c
+Pair.swap :: Pair a b -> Pair b a
 
 Pairs.fromMap :: Map a b -> [Pair a b]
 Pairs.toMap :: [Pair a b] -> Map a b

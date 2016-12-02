@@ -6,10 +6,18 @@ var Pair = {
   first: R.nth(0),
   // Pair a b -> b
   second: R.nth(1),
+  // (a -> c) -> Pair a b -> Pair c b
+  mapFirst: R.curry(function(fn, pair) {
+    return Pair.make(fn(Pair.first(pair)), Pair.second(pair));
+  }),
   // (b -> c) -> Pair a b -> Pair a c
   mapSecond: R.curry(function(fn, pair) {
     return Pair.make(Pair.first(pair), fn(Pair.second(pair)));
   }),
+  // Pair a b -> Pair b a
+  swap: function(pair) {
+    return Pair.make(Pair.second(pair), Pair.first(pair));
+  },
 };
 
 var Pairs = {
