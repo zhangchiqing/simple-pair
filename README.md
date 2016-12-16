@@ -32,22 +32,13 @@ var makePhotoWithUserName = function(photo, user) {
   };
 };
 
-// [{ userId: UserId, photo: String, name: String }]
-var photosWithMap = indexer(
-  R.prop('id'),
-  R.prop('id'),
-  users,
-  photos,
-  makePhotoWithUserName
-);
-
 var indexer = function(
-  idIndex,
-  photoIndex,
-  users,
-  photos,
-  makePhotoWithUserName
-) {
+  idIndex, // User -> UserId
+  photoIndex, // Photo -> String
+  users, // [User]
+  photos, // [Photo]
+  makePhotoWithUserName // Photo -> User? -> PhotoWithUser
+) { // [PhotoWithUser]
   // Map UserId User
   var indexMap = R.indexOf(idIndex, users);
   return R.map(function(p) {
@@ -58,6 +49,15 @@ var indexer = function(
     return makePhotoWithUserName(p, user);
   }, photos);
 };
+
+// [{ userId: UserId, photo: String, name: String }]
+var photosWithMap = indexer(
+  R.prop('id'),
+  R.prop('id'),
+  users,
+  photos,
+  makePhotoWithUserName
+);
 ```
 
 # API
